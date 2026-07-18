@@ -19,12 +19,9 @@ for (let i = 0; i < 4; i++) {
         main.appendChild(cell);
     }
 }
-let counter = 0;
+// since column 1 is reserved for row names, we start the counter at 2
+let counter = 2;
 setInterval(() => {
-    counter++;
-    if (counter > 16) {
-        counter = 1;
-    }
     const cells = document.querySelectorAll('.cell');
     for (let i = 0; i < cells.length; i++) {
         const cell = cells[i];
@@ -38,5 +35,9 @@ setInterval(() => {
         } else {
             cell.classList.remove('active-column');
         }
+    }
+    counter++;
+    if (counter > 17) {
+        counter = 2;
     }
 }, 125);
