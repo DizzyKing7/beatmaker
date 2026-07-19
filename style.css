@@ -9,7 +9,13 @@
     text-align: center;
     display: flex;
     /* width: 50px; */
+    border-width: 10px;
+    /* border-radius: 15px; */
+    height: 100px;
 }
 .active {
     background-color: #5badf5;
+}
+audio {
+    display: none;
 }
