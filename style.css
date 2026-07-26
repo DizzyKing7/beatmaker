@@ -1,21 +1,51 @@
+@font-face {
+    font-family: ShagExpert;
+    src: url(https://codehs.com/uploads/5a8a2b4781e7a905cd15df8a6526f629);
+}
+.info {
+    margin: 20px;
+}
 .main {
     display: grid;
     grid-template-columns: 100px repeat(17, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
 }
 .cell {
-    border: 1px solid black;
+    outline: 10px solid black;
+    /* border-width: 10px; */
     padding: 10px;
     text-align: center;
     display: flex;
     /* width: 50px; */
-    border-width: 10px;
     /* border-radius: 15px; */
-    height: 100px;
+    /* height: 75px; */
+    aspect-ratio: 1/1;
 }
 .active {
     background-color: #5badf5;
 }
+.active-column {
+    background-color:#5bf58e;
+}
+.active.active-column {
+    background-color: #f5e35b;
+}
+.cursor {
+    outline-color: magenta;
+    z-index: 1;
+}
 audio {
     display: none;
+}
+.row-name {
+    font-family: ShagExpert;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+p {
+    font-family: ShagExpert;
+    text-align: center;
+    margin: auto;
 }
